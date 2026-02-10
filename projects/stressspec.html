@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StressSpec – Jeffrey Perdue</title>
+    <meta
+      name="description"
+      content="StressSpec is a Python CLI tool for stress-testing software requirements, built by software engineer Jeffrey Perdue."
+    />
+    <meta
+      property="og:title"
+      content="StressSpec – Requirements Stress Tester"
+    />
+    <meta
+      property="og:description"
+      content="Python CLI tool that analyzes raw software requirement text and surfaces risk patterns before development."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../assets/img/og-stressspec.png" />
+    <meta
+      property="og:url"
+      content="https://jeffreyperdue.github.io/projects/stressspec.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="brand">
+          <a href="../index.html">Jeffrey Perdue</a>
+        </div>
+        <ul id="primary-nav" class="nav-links nav-links--simple">
+          <li><a href="../index.html#projects">Back to projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="project-main">
+      <article class="project-article">
+        <header class="project-header">
+          <p class="project-label">Tool</p>
+          <h1>StressSpec: Requirements Stress Tester</h1>
+          <p class="project-subtitle">Python · CLI · pytest</p>
+        </header>
+
+        <section aria-labelledby="stressspec-overview">
+          <h2 id="stressspec-overview">Overview</h2>
+          <p>
+            StressSpec is a Python CLI tool that analyzes raw software
+            requirements and surfaces risk patterns before development. It gives
+            teams a structured way to see where language, structure, or missing
+            details might cause bugs, rework, or misaligned expectations later.
+          </p>
+        </section>
+
+        <section aria-labelledby="stressspec-problem">
+          <h2 id="stressspec-problem">Problem</h2>
+          <p>
+            Requirements documents often hide risk behind vague language,
+            implicit assumptions, and inconsistent structure. These issues are
+            rarely obvious until implementation or testing, when they’re much
+            more expensive to fix. Many teams lack lightweight tooling to
+            critique requirements in the same way linters critique code.
+          </p>
+        </section>
+
+        <section aria-labelledby="stressspec-approach">
+          <h2 id="stressspec-approach">Approach</h2>
+          <p>
+            I built StressSpec as a modular, rule-based analysis pipeline. A
+            parser first turns raw requirement text into structured models with
+            unique IDs and line-level traceability. Pluggable detectors then
+            scan for risk patterns, and a reporting layer aggregates the results
+            into Markdown, CSV, and JSON outputs that can slot into existing
+            workflows.
+          </p>
+        </section>
+
+        <section aria-labelledby="stressspec-tech">
+          <h2 id="stressspec-tech">Tech stack</h2>
+          <ul>
+            <li>Python for the CLI and analysis pipeline.</li>
+            <li>
+              Modular detector architecture with a shared base class and
+              factory-style registration.
+            </li>
+            <li>
+              Structured internal models for requirements with stable IDs and
+              line references.
+            </li>
+            <li>
+              pytest-based unit and integration tests to validate parsing,
+              detection, and reporting behaviors.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="stressspec-decisions">
+          <h2 id="stressspec-decisions">Key decisions &amp; tradeoffs</h2>
+          <ul>
+            <li>
+              Chose a rule-based engine over ML to keep behavior explainable and
+              easy to extend with domain-specific checks.
+            </li>
+            <li>
+              Invested in multiple report formats so teams can plug results into
+              docs, spreadsheets, or automated gating in CI.
+            </li>
+            <li>
+              Focused initial rules on high-signal patterns (ambiguity,
+              testability, missing constraints) rather than trying to cover
+              every possible quality attribute at once.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="stressspec-learned">
+          <h2 id="stressspec-learned">What I learned</h2>
+          <p>
+            Building StressSpec deepened my understanding of how small wording
+            choices in requirements impact downstream design and testing. It also
+            reinforced the value of treating analysis tools as part of the
+            development pipeline rather than as one-off scripts.
+          </p>
+        </section>
+
+        <section aria-labelledby="stressspec-links">
+          <h2 id="stressspec-links">Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/jeffreyperdue"
+                target="_blank"
+                rel="noopener"
+                >GitHub (profile – link to StressSpec repo when public)</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Jeffrey Perdue. All rights reserved.</p>
+        <a href="#main-content" class="back-to-top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+

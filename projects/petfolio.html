@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Petfolio – Jeffrey Perdue</title>
+    <meta
+      name="description"
+      content="Petfolio is a cross-platform Flutter app for coordinated pet care, built by software engineer Jeffrey Perdue."
+    />
+    <meta property="og:title" content="Petfolio – Cross-Platform Pet Care App" />
+    <meta
+      property="og:description"
+      content="Cross-platform Flutter app for coordinated pet care, consolidating routines and handoffs into a shared source of truth."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../assets/img/og-petfolio.png" />
+    <meta
+      property="og:url"
+      content="https://jeffreyperdue.github.io/projects/petfolio.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="brand">
+          <a href="../index.html">Jeffrey Perdue</a>
+        </div>
+        <ul id="primary-nav" class="nav-links nav-links--simple">
+          <li><a href="../index.html#projects">Back to projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="project-main">
+      <article class="project-article">
+        <header class="project-header">
+          <p class="project-label">App</p>
+          <h1>Petfolio: Cross-Platform Pet Care App</h1>
+          <p class="project-subtitle">Flutter · Dart · Firebase</p>
+        </header>
+
+        <section aria-labelledby="petfolio-overview">
+          <h2 id="petfolio-overview">Overview</h2>
+          <p>
+            Petfolio is a cross-platform Flutter application that helps
+            households coordinate pet care. It provides a shared source of truth
+            for routines, responsibilities, and handoffs so that feeding,
+            medication, and other care tasks are clear, even when multiple
+            people are involved.
+          </p>
+        </section>
+
+        <section aria-labelledby="petfolio-problem">
+          <h2 id="petfolio-problem">Problem</h2>
+          <p>
+            In many homes, pet care is shared across family members, roommates,
+            or pet sitters. Information about schedules and responsibilities is
+            often scattered across text threads, sticky notes, or memory, which
+            makes it easy to miss doses, double-feed, or lose context when
+            someone new steps in to help.
+          </p>
+        </section>
+
+        <section aria-labelledby="petfolio-approach">
+          <h2 id="petfolio-approach">Approach</h2>
+          <p>
+            I designed Petfolio as a shared, structured view of each pet’s care
+            plan. Flutter provides a single codebase for iOS and Android, while
+            Firebase powers authentication, real-time data, and notifications.
+            I used Riverpod for state management and a repository pattern to
+            keep UI, business logic, and persistence concerns clearly separated.
+          </p>
+        </section>
+
+        <section aria-labelledby="petfolio-tech">
+          <h2 id="petfolio-tech">Tech stack</h2>
+          <ul>
+            <li>Flutter and Dart for a cross-platform mobile UI.</li>
+            <li>
+              Firebase Authentication, Firestore, and Storage for user, pet, and
+              media data.
+            </li>
+            <li>
+              Riverpod and a repository pattern for predictable, testable state
+              management.
+            </li>
+            <li>
+              Local, timezone-aware notifications for feeding and medication
+              reminders.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="petfolio-decisions">
+          <h2 id="petfolio-decisions">Key decisions &amp; tradeoffs</h2>
+          <ul>
+            <li>
+              Chose Firebase to prioritize iteration speed and built-in offline
+              support over full control of backend infrastructure.
+            </li>
+            <li>
+              Modeled users, pets, and care plans explicitly in Firestore to
+              keep access control and sharing rules understandable at a glance.
+            </li>
+            <li>
+              Focused v1 on core routines and handoffs, intentionally deferring
+              advanced analytics and complex reporting to future iterations.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="petfolio-learned">
+          <h2 id="petfolio-learned">What I learned</h2>
+          <p>
+            This project sharpened my ability to design data models that balance
+            day-to-day usability with long-term maintainability. It also forced
+            me to think carefully about offline behavior, notifications, and
+            role-based access in a consumer-facing context.
+          </p>
+        </section>
+
+        <section aria-labelledby="petfolio-links">
+          <h2 id="petfolio-links">Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/jeffreyperdue"
+                target="_blank"
+                rel="noopener"
+                >GitHub (profile – link to Petfolio repo when public)</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Jeffrey Perdue. All rights reserved.</p>
+        <a href="#main-content" class="back-to-top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+
