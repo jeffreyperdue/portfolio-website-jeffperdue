@@ -215,6 +215,88 @@ if (document.startViewTransition) {
 }
 
 /* ============================================================
+   SCREENSHOT GALLERY & MODAL
+   ============================================================ */
+(function () {
+  const thumbs = Array.from(document.querySelectorAll('.gallery-thumb[data-src]'));
+  if (!thumbs.length) return;
+
+  const srcs = thumbs.map(b => b.dataset.src);
+  const alts = thumbs.map(b => b.querySelector('img') ? b.querySelector('img').alt : '');
+
+  /* Build modal DOM (once) */
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Screenshot viewer');
+
+  overlay.innerHTML = `
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-container">
+      <img class="modal-img" src="" alt="" />
+    </div>
+    <button class="modal-prev" aria-label="Previous screenshot">&#8592;</button>
+    <button class="modal-next" aria-label="Next screenshot">&#8594;</button>
+    <div class="modal-counter" aria-live="polite"></div>
+  `;
+  document.body.appendChild(overlay);
+
+  const modalImg    = overlay.querySelector('.modal-img');
+  const prevBtn     = overlay.querySelector('.modal-prev');
+  const nextBtn     = overlay.querySelector('.modal-next');
+  const closeBtn    = overlay.querySelector('.modal-close');
+  const counter     = overlay.querySelector('.modal-counter');
+
+  let current = 0;
+
+  function show(index) {
+    current = (index + srcs.length) % srcs.length;
+    modalImg.src  = srcs[current];
+    modalImg.alt  = alts[current];
+    counter.textContent = srcs.length > 1 ? `${current + 1} / ${srcs.length}` : '';
+    prevBtn.hidden = srcs.length <= 1;
+    nextBtn.hidden = srcs.length <= 1;
+  }
+
+  function open(index) {
+    show(index);
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    /* Return focus to the thumb that opened the modal */
+    if (thumbs[current]) thumbs[current].focus();
+  }
+
+  /* Thumb clicks */
+  thumbs.forEach((btn, i) => {
+    btn.addEventListener('click', () => open(i));
+  });
+
+  /* Controls */
+  prevBtn.addEventListener('click', () => show(current - 1));
+  nextBtn.addEventListener('click', () => show(current + 1));
+  closeBtn.addEventListener('click', close);
+
+  /* Backdrop click */
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) close();
+  });
+
+  /* Keyboard navigation */
+  overlay.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape')       { e.preventDefault(); close(); }
+    else if (e.key === 'ArrowLeft')  { e.preventDefault(); show(current - 1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); }
+  });
+})();
+
+/* ============================================================
    FOOTER YEAR
    ============================================================ */
 const yearEl = document.getElementById('footer-year');
