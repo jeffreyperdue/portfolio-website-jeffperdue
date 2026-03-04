@@ -3,155 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>StressSpec – Jeffrey Perdue</title>
-    <meta
-      name="description"
-      content="StressSpec is a Python CLI tool for stress-testing software requirements, built by software engineer Jeffrey Perdue."
-    />
-    <meta
-      property="og:title"
-      content="StressSpec – Requirements Stress Tester"
-    />
-    <meta
-      property="og:description"
-      content="Python CLI tool that analyzes raw software requirement text and surfaces risk patterns before development."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="../assets/img/og-stressspec.png" />
-    <meta
-      property="og:url"
-      content="https://jeffreyperdue.github.io/projects/stressspec.html"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+    <title>StressSpec — Jeffrey Perdue</title>
+    <meta name="description" content="StressSpec: a full-stack requirements risk analysis platform built by Jeffrey Perdue using Python, FastAPI, and pytest." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="site-header" role="banner">
-      <nav class="site-nav" aria-label="Primary">
-        <div class="brand">
-          <a href="../index.html">Jeffrey Perdue</a>
+    <!-- Reading progress bar -->
+    <div class="progress-bar" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner" id="top">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+          <a href="../index.html" class="nav-brand" aria-label="Jeffrey Perdue — back to home">
+            Jeffrey Perdue
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+          <div id="primary-nav" class="nav-menu" aria-hidden="true">
+            <ol class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-num">01.</span>About</a></li>
+              <li><a href="../index.html#experience"><span class="nav-num">02.</span>Experience</a></li>
+              <li><a href="../index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+              <li><a href="../index.html#research"><span class="nav-num">04.</span>Research</a></li>
+              <li><a href="../index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+            </ol>
+            <a class="btn btn-resume" href="../resume.pdf" target="_blank" rel="noopener" aria-label="Open resume PDF">
+              Resume
+            </a>
+          </div>
         </div>
-        <ul id="primary-nav" class="nav-links nav-links--simple">
-          <li><a href="../index.html#projects">Back to projects</a></li>
-        </ul>
       </nav>
     </header>
 
-    <main id="main-content" class="project-main">
-      <article class="project-article">
-        <header class="project-header">
-          <p class="project-label">Tool</p>
-          <h1>StressSpec: Requirements Stress Tester</h1>
-          <p class="project-subtitle">Python · CLI · pytest</p>
-        </header>
+    <main id="main-content" class="project-page">
+      <div class="project-page-inner">
 
-        <section aria-labelledby="stressspec-overview">
-          <h2 id="stressspec-overview">Overview</h2>
-          <p>
-            StressSpec is a Python CLI tool that analyzes raw software
-            requirements and surfaces risk patterns before development. It gives
-            teams a structured way to see where language, structure, or missing
-            details might cause bugs, rework, or misaligned expectations later.
-          </p>
-        </section>
+        <a href="../index.html#projects" class="back-link">&#x2190; Back to all projects</a>
 
-        <section aria-labelledby="stressspec-problem">
-          <h2 id="stressspec-problem">Problem</h2>
-          <p>
-            Requirements documents often hide risk behind vague language,
-            implicit assumptions, and inconsistent structure. These issues are
-            rarely obvious until implementation or testing, when they’re much
-            more expensive to fix. Many teams lack lightweight tooling to
-            critique requirements in the same way linters critique code.
-          </p>
-        </section>
+        <article>
+          <header class="project-page-header">
+            <p class="project-page-overline">Tool</p>
+            <h1 class="project-page-title">StressSpec</h1>
+            <p class="project-page-subtitle">Requirements Risk Analysis Platform</p>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Jinja2</li>
+              <li>CLI</li>
+              <li>pytest</li>
+            </ul>
+            <div class="project-page-links">
+              <a href="https://github.com/jeffreyperdue/ase-420-individual-project" class="project-page-link" target="_blank" rel="noopener" aria-label="View StressSpec on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+              </a>
+            </div>
+          </header>
 
-        <section aria-labelledby="stressspec-approach">
-          <h2 id="stressspec-approach">Approach</h2>
-          <p>
-            I built StressSpec as a modular, rule-based analysis pipeline. A
-            parser first turns raw requirement text into structured models with
-            unique IDs and line-level traceability. Pluggable detectors then
-            scan for risk patterns, and a reporting layer aggregates the results
-            into Markdown, CSV, and JSON outputs that can slot into existing
-            workflows.
-          </p>
-        </section>
+          <section class="project-section" aria-labelledby="overview">
+            <h2 id="overview">Overview</h2>
+            <p>StressSpec is a full-stack platform for detecting risk in software requirements documents before a single line of implementation code is written. It scans requirements for structural ambiguity, scope gaps, testability failures, and compliance risks, then produces prioritized analysis reports for stakeholders.</p>
+            <p>The project ships as both a FastAPI web application (file upload, interactive views, downloadable HTML/CSV/JSON reports) and a standalone CLI — both powered by the same analysis pipeline, making it usable in automated workflows as well as manual review sessions.</p>
+          </section>
 
-        <section aria-labelledby="stressspec-tech">
-          <h2 id="stressspec-tech">Tech stack</h2>
-          <ul>
-            <li>Python for the CLI and analysis pipeline.</li>
-            <li>
-              Modular detector architecture with a shared base class and
-              factory-style registration.
-            </li>
-            <li>
-              Structured internal models for requirements with stable IDs and
-              line references.
-            </li>
-            <li>
-              pytest-based unit and integration tests to validate parsing,
-              detection, and reporting behaviors.
-            </li>
-          </ul>
-        </section>
+          <section class="project-section" aria-labelledby="problem">
+            <h2 id="problem">Problem</h2>
+            <p>Requirements defects are disproportionately expensive when discovered late. A vague or incomplete requirement that slips into implementation creates rework, misaligned features, and untestable code. Most teams lack a structured way to audit requirements quality before development begins — they rely on ad hoc review or discover problems during testing.</p>
+            <p>I wanted to build a tool that makes requirements risk <strong>visible and prioritized</strong>, giving teams a concrete starting point for requirements review rather than open-ended discussion.</p>
+          </section>
 
-        <section aria-labelledby="stressspec-decisions">
-          <h2 id="stressspec-decisions">Key decisions &amp; tradeoffs</h2>
-          <ul>
-            <li>
-              Chose a rule-based engine over ML to keep behavior explainable and
-              easy to extend with domain-specific checks.
-            </li>
-            <li>
-              Invested in multiple report formats so teams can plug results into
-              docs, spreadsheets, or automated gating in CI.
-            </li>
-            <li>
-              Focused initial rules on high-signal patterns (ambiguity,
-              testability, missing constraints) rather than trying to cover
-              every possible quality attribute at once.
-            </li>
-          </ul>
-        </section>
+          <section class="project-section" aria-labelledby="approach">
+            <h2 id="approach">Approach</h2>
+            <p>The core of StressSpec is a modular rule-based detection engine. Each rule targets a specific risk category — vague language, missing acceptance criteria, implicit dependencies, untestable assertions — and produces a severity-weighted finding. Rules are isolated and extensible, so adding a new risk category requires no changes to the pipeline core.</p>
+            <p>On top of the engine, I built two interfaces that share identical analysis logic:</p>
+            <ul>
+              <li><strong>FastAPI web app</strong>: accepts file uploads, runs the pipeline, and renders interactive results with an executive summary highlighting the Top 5 riskiest requirements.</li>
+              <li><strong>CLI</strong>: accepts file paths, writes analysis to stdout or file, and integrates cleanly into shell scripts or CI pipelines.</li>
+            </ul>
+            <p>Reports are available in HTML (rendered Jinja2 template), CSV (flat export for stakeholder review), and JSON (machine-readable for downstream tooling).</p>
+          </section>
 
-        <section aria-labelledby="stressspec-learned">
-          <h2 id="stressspec-learned">What I learned</h2>
-          <p>
-            Building StressSpec deepened my understanding of how small wording
-            choices in requirements impact downstream design and testing. It also
-            reinforced the value of treating analysis tools as part of the
-            development pipeline rather than as one-off scripts.
-          </p>
-        </section>
+          <section class="project-section" aria-labelledby="tech-stack">
+            <h2 id="tech-stack">Tech Stack</h2>
+            <table class="stack-table" aria-label="Technology choices and rationale">
+              <thead>
+                <tr>
+                  <th>Technology</th>
+                  <th>Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Python</td>
+                  <td>Strong text processing ecosystem; fast iteration for rule development.</td>
+                </tr>
+                <tr>
+                  <td>FastAPI</td>
+                  <td>Async, schema-driven API framework with automatic documentation; clean separation between route layer and analysis logic.</td>
+                </tr>
+                <tr>
+                  <td>Jinja2</td>
+                  <td>Templating for HTML report generation; keeps presentation logic out of the analysis pipeline.</td>
+                </tr>
+                <tr>
+                  <td>pytest</td>
+                  <td>Comprehensive unit and integration tests covering individual rules and end-to-end pipeline behavior.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
-        <section aria-labelledby="stressspec-links">
-          <h2 id="stressspec-links">Links</h2>
-          <ul>
-            <li>
-              <a
-                href="https://github.com/jeffreyperdue"
-                target="_blank"
-                rel="noopener"
-                >GitHub (profile – link to StressSpec repo when public)</a
-              >
-            </li>
-          </ul>
-        </section>
-      </article>
+          <section class="project-section" aria-labelledby="tradeoffs">
+            <h2 id="tradeoffs">Key Decisions &amp; Tradeoffs</h2>
+            <p><strong>Rule-based vs. ML-based detection.</strong> I chose rule-based detection over a machine learning approach intentionally. ML models produce probabilistic findings that are difficult to explain to a stakeholder; rule-based findings come with a clear, auditable rationale. For a tool whose purpose is to <em>build confidence</em> in requirements quality, explainability matters more than recall.</p>
+            <p><strong>Unified pipeline for both interfaces.</strong> I invested time in keeping the CLI and web app as thin wrappers over the same pipeline module rather than duplicating analysis logic per interface. The tradeoff was a slightly more constrained API design (the pipeline must produce a serializable result), but the benefit — single source of truth for all analysis behavior — made testing and iteration far simpler.</p>
+            <p><strong>Severity scoring vs. binary pass/fail.</strong> Rather than flagging requirements as simply "good" or "bad," the system assigns weighted severity scores and ranks findings. This reflects real-world triage: not all risks are equally urgent, and giving stakeholders a prioritized list (Top 5 riskiest requirements) is more actionable than an undifferentiated list.</p>
+          </section>
+
+          <section class="project-section" aria-labelledby="learnings">
+            <h2 id="learnings">What I Learned</h2>
+            <ul>
+              <li>Designing a rule engine that is both extensible and consistent requires thinking carefully about the interface between rules and the pipeline before writing the first rule. Retrofitting extensibility is expensive.</li>
+              <li>Dual interfaces (CLI + web) are a powerful feature, but only if the shared core is designed for it from the start. Shared logic built as an afterthought tends to carry interface-specific assumptions.</li>
+              <li>Writing tests for a text analysis tool surfaced edge cases in my rules faster than manual testing ever would have. The pytest suite became my primary feedback loop during rule development.</li>
+            </ul>
+          </section>
+        </article>
+
+      </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="footer-inner">
-        <p>© <span id="year"></span> Jeffrey Perdue. All rights reserved.</p>
-        <a href="#main-content" class="back-to-top">Back to top</a>
+        <p class="footer-copy">
+          Designed &amp; Built by
+          <a href="https://github.com/jeffreyperdue" target="_blank" rel="noopener">Jeffrey Perdue</a>
+        </p>
+        <p class="footer-year">&copy; <span id="footer-year"></span></p>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@1.1.14/bundled/lenis.min.js"></script>
     <script src="../assets/js/main.js" defer></script>
   </body>
 </html>
-

@@ -1,0 +1,206 @@
+%-------------------------
+% Resume in Latex
+% Author : Jeffrey Perdue
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jeffrey Perdue} \\ \vspace{1pt}
+    \small 513-462-6478 $|$ \href{mailto:jeffrey.perdue@gmail.com}{\underline{jeffrey.perdue@gmail.com}} $|$
+    \href{https://linkedin.com/in/jeffperdue/}{\underline{linkedin.com/in/jeffperdue/}} $|$
+    \href{https://github.com/jeffreyperdue}{\underline{github.com/jeffreyperdue}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Northern Kentucky University}{Highland Heights, KY}
+{Bachelor of Science in Applied Software Engineering, Minor in Computer Science, GPA: 3.9}{May 2026}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Java, Python, TypeScript, JavaScript, SQL, Dart, Embedded C/C++ \\
+\textbf{Backend \& Application}: Spring Boot, Node.js, Express.js, React, REST APIs, MongoDB, Firebase \\
+\textbf{Cloud \& Data}: Azure, Azure Synapse Analytics, Databricks \\
+\textbf{Embedded Systems}: ESP32, Arduino IDE, Bluetooth Low Energy (BLE), I\textsuperscript{2}C \\
+\textbf{Developer Tooling}: Git, GitHub, DBeaver, Jira \\
+\textbf{AI-Assisted Engineering}: ChatGPT, Claude, GitHub Copilot, Cursor
+}}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Software Engineering Intern}{August 2025 -- April 2026}
+{Kroger Technology -- End-to-End Fresh}{Blue Ash, OH}
+\resumeItemListStart
+\resumeItem{Contributing to backend services, front-end tools, and enterprise data platforms supporting production-adjacent systems using Spring Boot, React, SQL, Azure Synapse, and Databricks}
+\resumeItem{Engineered a production-grade Spring Boot scheduler to monitor device telemetry gaps, query SQL Server for stale records, and dispatch OAuth2-authenticated Feign email alerts with structured summaries, error handling, and testable service design}
+\resumeItem{Designed production-grade, version-aware SQL reconciliation logic in SQL Server using CTEs, window functions, and anti-join semantics to manage incremental purchase order loads, enforce soft-deactivation, and eliminate silent pipeline drift}
+\resumeItem{Participating in Agile and Kanban workflows, contributing to sprint planning and backlog refinement while translating loosely defined business requests into technically precise implementation tasks}
+\resumeItem{Designing and implementing a centralized mapping internal application as technical owner to standardize temperature zone codes across distribution centers, enabling consistent reporting and controlled business updates to previously unmapped codes}
+
+\resumeItemListEnd
+
+\resumeSubheading
+{Front End Supervisor}{June 2020 -- August 2025}
+{Costco Wholesale}{Columbus, OH; Florence, KY}
+\resumeItemListStart
+\resumeItem{Led and coordinated 60+ employees in high-volume retail operations, designing staffing and training structures to maintain performance consistency under fluctuating demand}
+\resumeItem{Partnered with management to analyze operational data, diagnose workflow bottlenecks, and implement process adjustments for a department generating over \$180M in annual revenue}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Petfolio — Cross-Platform Pet Care App}}{Flutter, Dart, Firebase}
+\resumeItemListStart
+\resumeItem{Designed a cross-platform system enabling coordinated pet care management across multiple caregivers, addressing synchronization and role-based access constraints}
+\resumeItem{Modeled Firestore schemas and security rules to enforce structured ownership and prevent unauthorized data mutation}
+\resumeItem{Implemented CRUD workflows and media handling while applying repository and Riverpod state management patterns to ensure testability and architectural clarity}
+\resumeItem{Integrated timezone-aware local notifications to prevent scheduling drift and ensure consistent reminder behavior}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{StressSpec — Requirements Risk Analysis Platform}}{Python, FastAPI, Jinja2, CLI, pytest}
+\resumeItemListStart
+\resumeItem{Engineered a full-stack requirements risk analysis platform to detect structural ambiguity, scope gaps, and compliance risks before development begins}
+\resumeItem{Designed a modular rule-based detection engine supporting 8 risk categories with extensible severity scoring and prioritization logic}
+\resumeItem{Built a FastAPI-powered web application with file upload handling, interactive analysis views, executive summaries, and downloadable HTML/CSV/JSON reports}
+\resumeItem{Implemented a combined risk scoring algorithm to rank and surface the Top 5 riskiest requirements for stakeholder prioritization}
+\resumeItem{Maintained dual interfaces (REST API + CLI) backed by a unified analysis pipeline; validated reliability through comprehensive unit and integration tests using pytest}
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{\textbf{StillCold — BLE-Based Embedded Temperature Monitoring}}{ESP32-C6, Arduino Nano, BLE, I\textsuperscript{2}C}
+\resumeItemListStart
+\resumeItem{Architected a modular embedded system separating sensing (HTU21D over I\textsuperscript{2}C) from wireless communication (custom BLE service) to isolate hardware acquisition from data exposure}
+\resumeItem{Implemented periodic sensor acquisition and BLE characteristic updates in embedded C/C++ while validating end-to-end data flow via serial diagnostics and BLE scanning tools}
+\resumeItem{Designed system to operate independently of Wi-Fi or cloud infrastructure, prioritizing low-overhead, deterministic local access}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{NomNom Safe — Allergen-Aware Menu System}}{Firebase, React, Express, Node.js}
+\resumeItemListStart
+\resumeItem{Collaborated on the design of a structured menu system treating allergen signaling as safety-critical information rather than free-text description}
+\resumeItem{Refactored MVP architecture to isolate non-core features and improve long-term maintainability}
+\resumeItem{Modeled explicit allergen attributes and enforced role-based access controls to preserve data integrity and controlled ownership}
+\resumeItem{Aligned requirements documentation and architectural decisions with IEEE and ISO-inspired standards for traceability and structured reasoning}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{Research}
+
+\resumeProjectHeading
+{\textbf{Preserving Requirements-Driven Development in the Age of AI}}{Undergraduate Research}
+\resumeItemListStart
+\resumeItem{Designed and executed empirical comparison of requirements-driven versus prompt-only LLM development workflows}
+\resumeItem{Applied ISO/IEC 25010 quality attributes and IEEE 830 / ISO/IEC/IEEE 29148 standards to evaluate structural integrity, maintainability, and traceability of AI-generated artifacts}
+\resumeItem{Conducted cross-model architectural comparisons across multiple LLM systems to assess consistency and long-term maintainability risk}
+\resumeItem{Featured Presenter at ISCAP Conference 2025}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{AI-Safe Ontology Engineering for Structured Allergen Reasoning}}{Undergraduate Research}
+\resumeItemListStart
+\resumeItem{Designed layered ontology framework to constrain LLM reasoning under uncertainty in safety-critical domains}
+\resumeItem{Developed formal exposure-state model requiring positive structural evidence for safety inference, reducing unjustified assumptions}
+\resumeItem{Architected abstraction pipeline (natural language $\rightarrow$ structured representation $\rightarrow$ RDF) to support collaborative ontology construction}
+\resumeItem{Conducting experimental evaluation measuring reduction in overconfident safety claims through ontology grounding}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------FELLOWSHIPS-----------
+\section{Fellowships \& Leadership}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{KCV Innovation Fellowship}{Spring 2026}
+{Kentucky Commercialization Ventures}{}
+\resumeItemListStart
+\resumeItem{Selected for cross-functional cohort focused on technology commercialization using the Time-to-Market framework}
+\resumeItem{Developing Market Attack Plans, conducting structured customer interviews, and assessing technology readiness levels}
+\resumeItem{Rotating as team lead across research phases, coordinating deliverables and pitch execution}
+\resumeItem{Designing commercialization strategies including IP positioning, revenue architecture, and ecosystem mapping}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

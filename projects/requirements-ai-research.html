@@ -3,163 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Requirements &amp; AI Research – Jeffrey Perdue</title>
-    <meta
-      name="description"
-      content="Undergraduate research by Jeffrey Perdue on preserving requirements-driven development in AI-assisted code generation."
-    />
-    <meta
-      property="og:title"
-      content="Preserving Requirements-Driven Development in the Age of AI"
-    />
-    <meta
-      property="og:description"
-      content="Undergraduate research study comparing requirements-driven and prompt-only LLM workflows for software development."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="../assets/img/og-requirements-ai-research.png"
-    />
-    <meta
-      property="og:url"
-      content="https://jeffreyperdue.github.io/projects/requirements-ai-research.html"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+    <title>Requirements-Driven Development Research — Jeffrey Perdue</title>
+    <meta name="description" content="Undergraduate research by Jeffrey Perdue: empirical comparison of requirements-driven vs. prompt-only LLM development. Presented at ISCAP 2025." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="site-header" role="banner">
-      <nav class="site-nav" aria-label="Primary">
-        <div class="brand">
-          <a href="../index.html">Jeffrey Perdue</a>
+    <div class="progress-bar" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner" id="top">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+          <a href="../index.html" class="nav-brand" aria-label="Jeffrey Perdue — back to home">
+            Jeffrey Perdue
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+          <div id="primary-nav" class="nav-menu" aria-hidden="true">
+            <ol class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-num">01.</span>About</a></li>
+              <li><a href="../index.html#experience"><span class="nav-num">02.</span>Experience</a></li>
+              <li><a href="../index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+              <li><a href="../index.html#research"><span class="nav-num">04.</span>Research</a></li>
+              <li><a href="../index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+            </ol>
+            <a class="btn btn-resume" href="../resume.pdf" target="_blank" rel="noopener" aria-label="Open resume PDF">
+              Resume
+            </a>
+          </div>
         </div>
-        <ul id="primary-nav" class="nav-links nav-links--simple">
-          <li><a href="../index.html#projects">Back to projects</a></li>
-        </ul>
       </nav>
     </header>
 
-    <main id="main-content" class="project-main">
-      <article class="project-article">
-        <header class="project-header">
-          <p class="project-label">Research</p>
-          <h1>
-            Preserving Requirements-Driven Development in the Age of AI
-          </h1>
-          <p class="project-subtitle">
-            Undergraduate research · ISCAP Conference 2025
-          </p>
-        </header>
+    <main id="main-content" class="project-page">
+      <div class="project-page-inner">
 
-        <section aria-labelledby="research-overview">
-          <h2 id="research-overview">Overview</h2>
-          <p>
-            This research project examines how traditional
-            requirements-driven development practices interact with
-            prompt-driven, AI-assisted code generation. I compared workflows
-            where requirements lead and guide implementation versus those where
-            large language models generate code directly from high-level
-            prompts.
-          </p>
-        </section>
+        <a href="../index.html#research" class="back-link">&#x2190; Back to all projects</a>
 
-        <section aria-labelledby="research-problem">
-          <h2 id="research-problem">Problem</h2>
-          <p>
-            As teams increasingly experiment with AI-assisted development, it is
-            easy for requirements discipline to erode. When code can be
-            generated quickly from prompts, there is a risk that important
-            quality attributes, constraints, and stakeholder needs get lost or
-            only discovered late in the process. I wanted to understand how much
-            this shift actually affects the resulting systems.
-          </p>
-        </section>
+        <article>
+          <header class="project-page-header">
+            <p class="project-page-overline">Undergraduate Research &nbsp;·&nbsp; Featured Presenter, ISCAP Conference 2025</p>
+            <h1 class="project-page-title">Preserving Requirements-Driven Development in the Age of AI</h1>
+            <p class="project-page-subtitle">Empirical study comparing structured requirements vs. prompt-only LLM development workflows</p>
+            <ul class="tag-list" aria-label="Research methods and standards">
+              <li>Empirical Study</li>
+              <li>ISO/IEC 25010</li>
+              <li>IEEE 830</li>
+              <li>LLM Evaluation</li>
+              <li>Requirements Engineering</li>
+            </ul>
+            <div class="project-page-links">
+              <span class="project-page-link" style="cursor: default; opacity: 0.6;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Conference paper — ISCAP 2025
+              </span>
+            </div>
+          </header>
 
-        <section aria-labelledby="research-approach">
-          <h2 id="research-approach">Approach</h2>
-          <p>
-            I designed an empirical study that compared multiple AI models and
-            workflows against established requirements engineering standards.
-            For each scenario, I captured both the requirements artifacts and
-            the resulting code, then evaluated them using ISO/IEC 25010 quality
-            attributes and IEEE 830 / ISO/IEC/IEEE 29148 guidance.
-          </p>
-        </section>
+          <section class="project-section" aria-labelledby="overview">
+            <h2 id="overview">Overview</h2>
+            <p>This research examined whether structured requirements documentation meaningfully improves the quality of software artifacts produced by large language models. As AI-assisted development becomes the norm, a critical question is emerging: does the discipline of requirements engineering still matter, or can teams skip directly to prompting?</p>
+            <p>I designed and executed an empirical study comparing two development workflows — one grounded in structured requirements documents (IEEE 830 / ISO/IEC/IEEE 29148 compliant), one relying on prompt-only LLM interaction — and evaluated the resulting artifacts against ISO/IEC 25010 quality attributes. Findings were presented at the ISCAP Conference 2025.</p>
+          </section>
 
-        <section aria-labelledby="research-tech">
-          <h2 id="research-tech">Methods &amp; tooling</h2>
-          <ul>
-            <li>
-              Defined repeatable prompts and requirements sets for comparing
-              workflows.
-            </li>
-            <li>
-              Ran cross-model comparisons across several large language models.
-            </li>
-            <li>
-              Evaluated code quality, architecture, and maintainability using
-              established quality models.
-            </li>
-            <li>
-              Analyzed differences in how requirements were reflected or
-              dropped in AI-generated implementations.
-            </li>
-          </ul>
-        </section>
+          <section class="project-section" aria-labelledby="problem">
+            <h2 id="problem">Research Question</h2>
+            <p>As LLMs become capable of generating substantial amounts of code from natural language prompts, practitioners are debating whether formal requirements processes retain value. The risk is real: if teams abandon structured requirements in favor of direct prompting, they may gain short-term speed while eroding architectural coherence, traceability, and long-term maintainability.</p>
+            <p>The study asked: <strong>Do structured requirements documents, when provided to LLMs, produce software artifacts with measurably higher structural integrity, maintainability, and traceability than prompt-only generation?</strong></p>
+          </section>
 
-        <section aria-labelledby="research-decisions">
-          <h2 id="research-decisions">Key findings &amp; tradeoffs</h2>
-          <ul>
-            <li>
-              Pure prompt-driven workflows can yield impressive prototypes
-              quickly but often under-specify edge cases and non-functional
-              requirements.
-            </li>
-            <li>
-              Combining structured requirements with AI assistance tends to
-              produce more maintainable designs, at the cost of slower initial
-              iteration.
-            </li>
-            <li>
-              Clear traceability from requirement to code remains valuable, even
-              when LLMs accelerate implementation.
-            </li>
-          </ul>
-        </section>
+          <section class="project-section" aria-labelledby="approach">
+            <h2 id="approach">Research Design</h2>
+            <p>The study used a controlled comparison framework. For each development task:</p>
+            <ol>
+              <li><strong>Condition A</strong>: Provide a structured requirements document (IEEE 830-compliant) to the LLM as context before generating code.</li>
+              <li><strong>Condition B</strong>: Provide only a natural language prompt describing the desired behavior, without formal requirements.</li>
+            </ol>
+            <p>The same tasks were run across multiple LLM systems to test consistency across models. Generated artifacts were then evaluated against ISO/IEC 25010 quality sub-characteristics: functional suitability, maintainability, and analyzability. A traceability analysis was also conducted to assess whether generated components could be mapped back to documented requirements.</p>
+            <p>The evaluation rubric was developed from ISO/IEC 25010 and IEEE 830 standards, providing a principled, reproducible scoring framework rather than subjective code review.</p>
+          </section>
 
-        <section aria-labelledby="research-learned">
-          <h2 id="research-learned">What I learned</h2>
-          <p>
-            This work strengthened my belief that AI tools are most effective
-            when anchored by thoughtful requirements and human judgment. It also
-            gave me language and frameworks for talking about software quality
-            beyond just \"does it work,\" which I now bring into my own projects
-            and collaborations.
-          </p>
-        </section>
+          <section class="project-section" aria-labelledby="tradeoffs">
+            <h2 id="tradeoffs">Key Findings</h2>
+            <p><strong>Quality degradation without requirements is measurable and consistent.</strong> Across tasks and models, prompt-only generation produced artifacts with lower scores on maintainability and traceability sub-characteristics. The degradation was not marginal — it was structurally significant, manifesting as missing edge case handling, implicit assumptions baked into architecture, and components that could not be cleanly traced to stated functional needs.</p>
+            <p><strong>LLM consistency varied significantly across models.</strong> The study found notable architectural divergence between models on the same requirements-grounded task, raising questions about which models are most appropriate for use in long-horizon development where consistency matters.</p>
+            <p><strong>Requirements documents constrain beneficial ambiguity resolution.</strong> Interestingly, structured requirements also <em>constrained</em> certain creative problem-solving behaviors in LLMs. This tradeoff — predictability vs. creative flexibility — is an area for further investigation.</p>
+          </section>
 
-        <section aria-labelledby="research-links">
-          <h2 id="research-links">Links</h2>
-          <ul>
-            <li>
-              <span>Featured presenter at ISCAP Conference 2025.</span>
-            </li>
-          </ul>
-        </section>
-      </article>
+          <section class="project-section" aria-labelledby="learnings">
+            <h2 id="learnings">What I Learned</h2>
+            <ul>
+              <li>Designing a rigorous empirical study requires specifying evaluation criteria before generating the artifacts being evaluated. Post-hoc rubric construction introduces measurement bias that is difficult to correct.</li>
+              <li>ISO and IEEE standards, often dismissed as academic overhead, provide genuinely useful evaluation vocabulary. ISO/IEC 25010's quality sub-characteristics gave the study a principled, reproducible measurement framework that would have been difficult to construct from scratch.</li>
+              <li>Presenting findings at a conference — building a narrative that is persuasive to a mixed academic/practitioner audience — required distilling complex empirical data into clear, contestable claims. That skill transfers directly to technical communication at work.</li>
+            </ul>
+          </section>
+        </article>
+
+      </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="footer-inner">
-        <p>© <span id="year"></span> Jeffrey Perdue. All rights reserved.</p>
-        <a href="#main-content" class="back-to-top">Back to top</a>
+        <p class="footer-copy">
+          Designed &amp; Built by
+          <a href="https://github.com/jeffreyperdue" target="_blank" rel="noopener">Jeffrey Perdue</a>
+        </p>
+        <p class="footer-year">&copy; <span id="footer-year"></span></p>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@1.1.14/bundled/lenis.min.js"></script>
     <script src="../assets/js/main.js" defer></script>
   </body>
 </html>
-
